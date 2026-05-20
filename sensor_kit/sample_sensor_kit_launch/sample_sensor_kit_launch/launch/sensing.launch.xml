@@ -30,9 +30,11 @@
     </include>
 
     <!-- Vehicle Velocity Converter  -->
+    <let name="vehicle_velocity_converter_param_file" value="$(find-pkg-share sample_sensor_kit_description)/config/vehicle_velocity_converter.param.yaml"/>
     <include file="$(find-pkg-share autoware_vehicle_velocity_converter)/launch/vehicle_velocity_converter.launch.xml">
       <arg name="input_vehicle_velocity_topic" value="/vehicle/status/velocity_status"/>
       <arg name="output_twist_with_covariance" value="/sensing/vehicle_velocity_converter/twist_with_covariance"/>
+      <arg name="config_file" value="$(var vehicle_velocity_converter_param_file)"/>
     </include>
   </group>
 </launch>
