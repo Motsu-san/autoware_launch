@@ -1,5 +1,6 @@
 <launch>
   <arg name="launch_driver" default="true" description="do launch driver"/>
+  <arg name="gnss_receiver" default="ublox" description="passed to gnss.launch.xml (ublox or septentrio)"/>
   <arg name="vehicle_mirror_param_file" description="path to the file of vehicle mirror position yaml"/>
   <arg name="pointcloud_container_name" default="pointcloud_container"/>
   <arg name="vehicle_id" default="$(env VEHICLE_ID default)"/>
@@ -25,6 +26,7 @@
     <!-- GNSS Driver -->
     <include file="$(find-pkg-share sample_sensor_kit_launch)/launch/gnss.launch.xml">
       <arg name="launch_driver" value="$(var launch_driver)"/>
+      <arg name="gnss_receiver" value="$(var gnss_receiver)"/>
     </include>
 
     <!-- Vehicle Velocity Converter  -->

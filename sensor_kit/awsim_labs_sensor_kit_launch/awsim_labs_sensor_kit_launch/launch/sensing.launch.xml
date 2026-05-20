@@ -4,6 +4,7 @@
   <arg name="vehicle_mirror_param_file" description="path to the file of vehicle mirror position yaml"/>
   <arg name="pointcloud_container_name" default="pointcloud_container"/>
   <arg name="use_distortion_corrector" default="false" description="compensate the point cloud distortion caused by vehicle movement"/>
+  <arg name="gnss_receiver" default="ublox" description="accepted for tier4_sensing_launch API compatibility; unused in this kit"/>
 
   <group>
     <!-- LiDAR Driver -->
