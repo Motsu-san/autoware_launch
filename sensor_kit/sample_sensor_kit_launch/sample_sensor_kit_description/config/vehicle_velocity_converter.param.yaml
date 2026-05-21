@@ -1,7 +1,6 @@
-# Estimated by deviation_estimator
 /**:
   ros__parameters:
-    speed_scale_factor: 1.00972
-    velocity_stddev_xx: 0.29198
+    speed_scale_factor: 1.00059 # [-] Default value
+    velocity_stddev_xx: 0.22803  # [m/s] Default value
     angular_velocity_stddev_zz: 0.1 # Default value
-    frame_id: base_link # Default value
+    frame_id: base_link
