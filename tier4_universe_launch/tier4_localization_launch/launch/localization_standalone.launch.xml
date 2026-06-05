@@ -125,7 +125,6 @@
       <arg name="initial_pose" value="$(var initial_pose)"/>
 
       <arg name="localization_error_monitor_param_path" value="$(var loc_config_path)/localization_error_monitor.param.yaml"/>
-      <arg name="feature_environment_recognizer_param_path" value="$(find-pkg-share autoware_feature_environment_recognizer)/config/feature_environment_recognizer.param.yaml"/>
       <arg name="ekf_localizer_param_path" value="$(var loc_config_path)/ekf_localizer.param.yaml"/>
       <arg name="pose_initializer_param_path" value="$(var loc_config_path)/pose_initializer.param.yaml"/>
       <arg name="twist2accel_param_path" value="$(var loc_config_path)/twist2accel.param.yaml"/>
