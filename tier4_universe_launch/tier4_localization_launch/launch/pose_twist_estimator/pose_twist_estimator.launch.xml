@@ -14,7 +14,7 @@
   <arg name="ll2_decomposer_param_path" default="$(find-pkg-share yabloc_common)/config/ll2_decomposer.param.yaml"/>
 
   <arg name="use_autoware_pose_covariance_modifier" default="false"/>
-  <arg name="use_autoware_covariance_selector" default="false"/>
+  <arg name="use_autoware_covariance_selector" default="true"/>
   <arg name="covariance_selector_param_path" default="$(find-pkg-share autoware_covariance_selector)/config/covariance_selector.param.yaml"/>
   <!-- only when running with a real vehicle, the pose_initializer judges the stop -->
   <let name="stop_check_enabled" if="$(eval &quot;'$(var system_run_mode)'=='online'&quot;)" value="true"/>
