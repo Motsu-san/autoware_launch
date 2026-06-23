@@ -72,6 +72,7 @@
   <arg name="input_pointcloud" default="/sensing/lidar/concatenated/pointcloud" description="input for localization pointcloud util"/>
   <arg name="initial_pose" default="[]" description="initial pose (x, y, z, quat_x, quat_y, quat_z, quat_w)"/>
   <arg name="gnss_receiver" default="ublox" description="passed to tier4_sensing_launch (e.g. sample_sensor_kit: ublox or septentrio)"/>
+  <arg name="use_autoware_velocity_scale_selector" default="true" description="enable area-based longitudinal_scale_factor on twist (tunnel SF adjustment)"/>
 
   <group scoped="false">
     <include file="$(find-pkg-share autoware_global_parameter_loader)/launch/global_params.launch.py">
@@ -132,6 +133,7 @@
       <arg name="stop_filter_param_path" value="$(var autoware_loc_config_path)/stop_filter.param.yaml"/>
       <arg name="pose_instability_detector_param_path" value="$(var autoware_loc_config_path)/pose_instability_detector.param.yaml"/>
       <arg name="velocity_scale_selector_param_path" value="$(var autoware_loc_config_path)/velocity_scale_selector.param.yaml"/>
+      <arg name="use_autoware_velocity_scale_selector" value="$(var use_autoware_velocity_scale_selector)"/>
 
       <arg name="ndt_scan_matcher/ndt_scan_matcher_param_path" value="$(var loc_config_path)/ndt_scan_matcher/ndt_scan_matcher.param.yaml"/>
       <arg

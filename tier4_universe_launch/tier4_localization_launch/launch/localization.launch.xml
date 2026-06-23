@@ -15,6 +15,7 @@
   <arg name="localization_error_monitor_param_path"/>
   <arg name="covariance_selector_param_path" default="$(find-pkg-share autoware_covariance_selector)/config/covariance_selector.param.yaml"/>
   <arg name="velocity_scale_selector_param_path" default="$(find-pkg-share autoware_velocity_scale_selector)/config/velocity_scale_selector.param.yaml"/>
+  <arg name="use_autoware_velocity_scale_selector" default="false"/>
   <arg name="ekf_localizer_param_path"/>
   <arg name="stop_filter_param_path"/>
   <arg name="pose_instability_detector_param_path"/>
@@ -51,6 +52,7 @@
       <arg name="input_pointcloud" value="$(var input_pointcloud)"/>
       <arg name="covariance_selector_param_path" value="$(var covariance_selector_param_path)"/>
       <arg name="velocity_scale_selector_param_path" value="$(var velocity_scale_selector_param_path)"/>
+      <arg name="use_autoware_velocity_scale_selector" value="$(var use_autoware_velocity_scale_selector)"/>
       <arg name="camera_pose_initializer_param_path" value="$(var camera_pose_initializer_param_path)"/>
       <arg name="camera_particle_corrector_param_path" value="$(var camera_particle_corrector_param_path)"/>
       <arg name="gnss_particle_corrector_param_path" value="$(var gnss_particle_corrector_param_path)"/>
