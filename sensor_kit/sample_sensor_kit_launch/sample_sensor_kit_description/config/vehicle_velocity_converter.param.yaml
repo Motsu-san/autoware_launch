@@ -1,6 +1,6 @@
 /**:
   ros__parameters:
-    speed_scale_factor: 1.0117142849234646
-    velocity_stddev_xx: 0.29198
+    speed_scale_factor: 1.010125266789952
+    velocity_stddev_xx: 0.19799
     angular_velocity_stddev_zz: 0.1
     frame_id: base_link
